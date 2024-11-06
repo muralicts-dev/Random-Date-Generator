@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 700px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #fff;
+}
+
+.input-container p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.radio-option {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+  display: none;
+}
+
+.radio-option span {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.radio-option input[type="radio"]:checked + span {
+  background: #ff8a65;
+  color: #fff;
+}
+
+.radio-option:hover span {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.action-button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #4e54c8;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-button:hover {
+  background-color: #8f94fb;
+  transform: scale(1.05);
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #fff;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.highlight {
+  color: #ff8a65;  /* Highlight color */
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.calendar {
+  margin-top: 20px;
+}
+
+.yearly-calendar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  color: #333;
+}
+
+.month {
+  width: 30%;
+  min-width: 250px;
+  background-color: #fff;
+  color: #333;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.month:hover {
+  transform: translateY(-5px);
+}
+
+.month h3 {
+  text-align: center;
+  color: #4e54c8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  padding: 5px;
+  width: 14.2%;
+}
+
+th {
+  color: #555;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  padding: 8px 0;
+}
+
+td:not(:empty) {
+  background-color: #f0f8ff;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+td:not(:empty):hover {
+  background-color: #ff8a65;
+  color: #fff;
+}

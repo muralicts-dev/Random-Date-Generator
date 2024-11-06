@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Date Generator & Yearly Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Random Date Generator</h1>
+
+    <!-- Radio buttons for predefined date ranges -->
+    <div class="input-container">
+      <p>Select a Date Range:</p>
+      <label class="radio-option">
+        <input type="radio" name="date-range" value="1900-2100" onclick="setDateRange('1900-2100')">
+        <span>1900 - 2100</span>
+      </label>
+      <label class="radio-option">
+        <input type="radio" name="date-range" value="1600-1900" onclick="setDateRange('1600-1900')">
+        <span>1600 - 1900</span>
+      </label>
+      <label class="radio-option">
+        <input type="radio" name="date-range" value="2100-2500" onclick="setDateRange('2100-2500')">
+        <span>2100 - 2500</span>
+      </label>
+    </div>
+
+    <!-- Buttons to generate random date and display yearly calendar -->
+    <button class="action-button" onclick="generateRandomDate()">Generate Random Date</button>
+    <button class="action-button" onclick="displayYearlyCalendar()">Display Yearly Calendar</button>
+
+    <!-- Display the result and calendar -->
+    <div class="result" id="result"></div>
+    <div class="calendar" id="calendar"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
